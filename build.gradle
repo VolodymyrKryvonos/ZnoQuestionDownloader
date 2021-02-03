@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.kotlin.jvm' version '1.4.10'
+    id 'application'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+mainClassName  = 'com.example.Main'
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    implementation 'org.junit.jupiter:junit-jupiter:5.5.1'
+    implementation 'org.seleniumhq.selenium:selenium-java:3.141.59'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+}
+
+test {
+    useJUnitPlatform()
+}
